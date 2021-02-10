@@ -1,0 +1,248 @@
+/* Start my framework */
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    height: 2000px;
+    line-height: 2;
+    color: #343A40
+}
+
+.active {
+    background-color: #32DBC6
+}
+
+.main-color {
+    color: #32DBC6
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6)
+}
+
+ul {
+    list-style: none
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.btn-info {
+    border-radius: 20px
+}
+
+
+/* End my framework */
+.contact-info {
+    padding: 5px;
+    color: aliceblue
+}
+
+.contact-info .row p {
+    display: inline-block
+}
+
+.navbar .navbar-brand {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-weight: 700;
+    font-size: 33px;
+}
+
+.side-nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100vh;
+    background-color: aliceblue;
+    z-index: 4000;
+    display: none;
+    animation-duration: .5s
+}
+
+.side-nav .close {
+    cursor: pointer
+}
+
+.side-nav li {
+    margin-bottom: 22px;
+    padding: 5px;
+    width: 100px;
+
+}
+
+.side-nav a {
+    color: #222;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    background-image: url(../images/header.jpg);
+    height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+header .overlay {
+    padding: 160px;
+    color: #F8F9FA
+}
+
+
+header .overlay .btn-primary,
+section form button.btn-primary {
+    border-radius: 20px;
+    border-color: #32DBC6;
+    padding: 10px 30px;
+    background-color: #32DBC6
+}
+
+
+.work div {
+    width: 60%
+}
+
+.work-imgs ul li {
+    display: inline;
+}
+
+.work-imgs ul li a {
+    border-radius: 20px;
+    padding: 7px 20px;
+}
+
+.delete {
+    animation: delete-img .5s ease;
+    display: none
+}
+
+.show {
+    animation: show-img .5s ease;
+    display: block
+}
+
+.img-sec .image {
+    width: 100%;
+    height: 300px;
+    position: relative;
+
+}
+
+.img-sec .image .overlay {
+    padding-top: 120px;
+    color: aliceblue;
+    opacity: 0;
+    transition: all .5s ease
+}
+
+.img-sec .image:hover .overlay {
+    opacity: 1
+}
+
+.carousel .test-img {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    border-radius: 50%;
+    background-image: url(../images/person_1.jpg);
+    background-size: cover
+}
+
+.carousel .one {
+    background-image: url(../images/person_5.jpg);
+}
+
+.carousel .two {
+    background-image: url(../images/person_6.jpg)
+}
+
+.carousel li {
+    background-color: #32DBC6;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%
+}
+
+.serv-icon,
+.sern-content {
+    float: left
+}
+
+.form-control {
+    border-radius: 30px
+}
+
+.end {
+    background-color: #32DBC6;
+    color: aliceblue
+}
+
+.end2 {
+    color: aliceblue
+}
+
+.end2 p {
+    color: #bbb;
+    padding-top: 20px
+}
+
+.up {
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    display: none;
+}
+
+/*start animation*/
+
+@keyframes show-img {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    100% {
+        transform: scale(1, 1)
+    }
+}
+
+@keyframes delete-img {
+    0% {
+        transform: scale(1, 1);
+    }
+
+    100% {
+        transform: scale(0, 0)
+    }
+}
+
+/***************  media  **********/
+/*larg screen*/
+@media (min-width: 992px) {
+    .contact-info .social-media {
+        margin-left: 52%
+    }
+}
+
+/*medium and small screens*/
+@media (max-width: 768px) {
+    header .overlay {
+        padding: 70px;
+    }
+
+    .work div {
+        width: 80%
+    }
+}
